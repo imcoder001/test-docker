@@ -11,14 +11,16 @@
 - Create .env file in the root of project
 - Add following content. Change variables according to your environement
 
-MYSQL_DATABASE=currikiserver
-MYSQL_USER=currikireact
-MYSQL_PASSWORD=secret123
-MYSQL_ROOT_PASSWORD=secret
-MYSQL_LOCAL_PORT=3307
-PHP_LOCAL_PORT=9001
-CLIENT_LOCAL_PORT=3001
+```
+	MYSQL_DATABASE=currikiserver
+	MYSQL_USER=currikireact
+	MYSQL_PASSWORD=secret123
+	MYSQL_ROOT_PASSWORD=secret
+	MYSQL_LOCAL_PORT=3307
+	PHP_LOCAL_PORT=9001
+	CLIENT_LOCAL_PORT=3001
 
+```
 
 ## Create volumes
 For persistent databases 
@@ -31,7 +33,7 @@ For persistent databases
 - Run command `docker-compose run --rm composer install` to install server dependencies
 - create .env file inside /server. Sample is given here. Change variables accroding to the .env of root directorys
 
-
+```
 	APP_NAME=Laravel
 	APP_ENV=local
 	APP_KEY=
@@ -78,7 +80,7 @@ For persistent databases
 
 	MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
 	MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
-
+```
 
 - Run command `docker-compose run --rm artisan key:generate` to install server dependencies
 - Run command `docker-compose run --rm artisan storage:link` to create storage link
@@ -89,7 +91,7 @@ For persistent databases
 
 ##URLS
 
-- http://localhost:3001 - React
-- http://localhost:8082 - Server
-- http://localhost:8088 - PhpMyAdmin
+- http://localhost:8082 - React
+- http://localhost:8082/api - Server
+- http://localhost:8082/phpmyadmin/ - PhpMyAdmin
 
