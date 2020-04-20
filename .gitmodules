@@ -1,0 +1,6 @@
+[submodule "test-react"]
+	path = test-react
+	url = https://github.com/imcoder001/test-react.git
+[submodule "test-laravel"]
+	path = test-laravel
+	url = https://github.com/imcoder001/test-laravel.git
